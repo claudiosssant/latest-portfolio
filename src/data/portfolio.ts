@@ -135,7 +135,7 @@ export const portfolioData: PortfolioData = {
       },
     ],
     highlights: [
-      { en: "2+ years of market experience", pt: "2+ anos de experiência de mercado" },
+      { en: "3+ years of market experience", pt: "3+ anos de experiência de mercado" },
       { en: "Web and mobile product development", pt: "Desenvolvimento de produtos web e mobile" },
       { en: "Strong design and user experience awareness", pt: "Forte atenção a design e experiência do usuário" },
       { en: "Graduating in Sistemas para Internet in 2026", pt: "Graduando em Sistemas para Internet com conclusão em 2026" },
@@ -173,6 +173,30 @@ export const portfolioData: PortfolioData = {
           {
             en: "Refactored code, fixed bugs, and helped align delivery through planning and client meetings.",
             pt: "Refatorou código, corrigiu bugs e ajudou no alinhamento das entregas por meio de planejamentos e reuniões com clientes.",
+          },
+        ],
+      },
+      {
+        company: "Freelancer",
+        role: { en: "Full Stack Developer", pt: "Desenvolvedor Full Stack" },
+        period: "Oct 2024 - Apr 2025",
+        location: { en: "Brazil · Remote", pt: "Brasil · Remoto" },
+        bullets: [
+          {
+            en: "Built fullstack solutions for web and mobile using JavaScript, TypeScript, React, Next.js, and React Native.",
+            pt: "Desenvolveu soluções fullstack para web e mobile usando JavaScript, TypeScript, React, Next.js e React Native.",
+          },
+          {
+            en: "Created responsive interfaces with Tailwind CSS and NativeWind, keeping usability and visual consistency as priorities.",
+            pt: "Criou interfaces responsivas com Tailwind CSS e NativeWind, mantendo usabilidade e consistência visual como prioridades.",
+          },
+          {
+            en: "Integrated services and APIs with Node.js, NestJS, Prisma, and TypeScript for maintainable product flows.",
+            pt: "Realizou integrações de serviços e APIs com Node.js, NestJS, Prisma e TypeScript para fluxos de produto sustentáveis.",
+          },
+          {
+            en: "Delivered product-oriented features across front-end and backend with the same core technology stack used in later professional roles.",
+            pt: "Entregou funcionalidades orientadas a produto entre front-end e backend com a mesma stack principal usada nas experiências profissionais seguintes.",
           },
         ],
       },
@@ -223,11 +247,19 @@ export const portfolioData: PortfolioData = {
     partners: [
       {
         name: "Campari",
-        logo: "/assets/logo-campari.webp",
+        logo: "/assets/logo-campari.png",
+      },
+      {
+        name: "Fiabesa",
+        logo: "/assets/logo-fiabesa.png",
       },
       {
         name: "Polícia Civil de Pernambuco",
         logo: "/assets/logo-policia.png",
+      },
+      {
+        name: "UpSaúde",
+        logo: "/assets/logo-upsaúde.png",
       },
     ],
     cards: [

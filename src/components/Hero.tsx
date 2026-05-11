@@ -14,25 +14,25 @@ export function Hero({ data, locale }: HeroProps) {
   const [activeSlide, setActiveSlide] = useState(0);
   const imageSlides = [
     {
-      src: "/assets/claudio2.png",
+      src: "/assets/hero1.jpeg",
       alt:
         locale === "en"
-          ? "Claudio Santos portrait"
-          : "Retrato de Claudio Santos",
+          ? "Hero project image 1"
+          : "Imagem hero 1",
     },
     {
-      src: "/assets/claudio.jpeg",
+      src: "/assets/hero2.jpeg",
       alt:
         locale === "en"
-          ? "Claudio Santos professional photo"
-          : "Foto profissional de Claudio Santos",
+          ? "Hero project image 2"
+          : "Imagem hero 2",
     },
     {
-      src: "/assets/project1.png",
+      src: "/assets/hero3.jpeg",
       alt:
         locale === "en"
-          ? "Personal project preview"
-          : "Prévia de projeto pessoal",
+          ? "Hero project image 3"
+          : "Imagem hero 3",
     },
   ];
 
