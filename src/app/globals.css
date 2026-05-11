@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f5f1e8;
+  color: #10131a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: rgba(202, 138, 4, 0.25);
+}
+
+a,
+button {
+  outline-color: #ca8a04;
+  outline-offset: 4px;
+}
