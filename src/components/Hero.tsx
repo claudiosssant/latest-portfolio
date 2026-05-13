@@ -47,31 +47,33 @@ export function Hero({ data, locale }: HeroProps) {
   return (
     <Section
       id="hero"
-      className="overflow-hidden bg-ink bg-hero-radial text-white lg:py-14 h-screen"
+      className="min-h-[calc(100svh-4.75rem)] overflow-x-hidden bg-ink bg-hero-radial text-white py-12 sm:py-16 lg:py-14"
     >
-      <div className="grid gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
-        <div className="relative">
-          <h1 className="mt-8 max-w-3xl font-display text-5xl leading-[1.02] sm:text-4xl lg:text-5xl xl:text-7xl">
+      <div className="grid min-w-0 gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(26rem,0.95fr)] lg:items-center">
+        <div className="relative min-w-0">
+          <h1 className="max-w-3xl text-balance break-words font-display text-[clamp(2.55rem,10.5vw,4.5rem)] leading-[1.05] sm:text-[clamp(3rem,7vw,5rem)] lg:text-[clamp(3.25rem,4.7vw,5.5rem)]">
             {data.hero.headline[locale]}
           </h1>
-          <p className="mt-8 max-w-2xl text-lg leading-8 text-stone-300 sm:text-xl">
+          <p className="mt-7 max-w-2xl text-pretty text-base leading-8 text-stone-300 sm:text-lg lg:text-xl">
             {data.hero.description[locale]}
           </p>
 
-          <div className="mt-10 flex flex-wrap gap-4">
+          <div className="mt-9 flex flex-wrap gap-4">
             <ButtonLink href="#projects">{data.labels.viewProjects[locale]}</ButtonLink>
             <ButtonLink href="#contact" variant="ghost">
               {data.labels.contactMe[locale]}
             </ButtonLink>
           </div>
 
-          <div className="mt-12 grid gap-4 sm:grid-cols-3">
+          <div className="mt-12 grid min-w-0 gap-4 sm:grid-cols-3">
             {data.hero.stats.map((stat) => (
               <div
                 key={stat.value}
-                className="rounded-3xl border border-white/10 bg-white/5 p-5"
+                className="min-w-0 rounded-3xl border border-white/10 bg-white/5 p-5"
               >
-                <p className="font-display text-2xl text-accentSoft">{stat.value}</p>
+                <p className="break-words font-display text-2xl leading-tight text-accentSoft">
+                  {stat.value}
+                </p>
                 <p className="mt-2 text-sm leading-6 text-stone-300">
                   {stat.label[locale]}
                 </p>
@@ -79,17 +81,17 @@ export function Hero({ data, locale }: HeroProps) {
             ))}
           </div>
 
-          <div className="mt-10 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-stone-500">
+          <div className="mt-10 hidden items-center gap-3 text-xs uppercase tracking-[0.28em] text-stone-500 sm:flex">
             <span className="h-px w-12 bg-white/15" />
             {data.labels.scrollLabel[locale]}
           </div>
         </div>
 
-        <div className="relative">
+        <div className="relative min-w-0">
           <div className="absolute -left-10 top-10 hidden h-36 w-36 rounded-full bg-accent/20 blur-3xl md:block" />
           <div className="absolute bottom-8 right-0 hidden h-52 w-52 rounded-full bg-white/10 blur-3xl md:block" />
 
-          <div className="relative rounded-[2rem] border border-white/10 bg-white/5 p-4 shadow-panel backdrop-blur">
+          <div className="relative rounded-[1.5rem] border border-white/10 bg-white/5 p-3 shadow-panel backdrop-blur sm:rounded-[2rem] sm:p-4">
             <div className="relative overflow-hidden rounded-[1.6rem] border border-white/10 bg-[#171c25]">
               <div className="absolute inset-x-0 top-0 z-10 flex items-center justify-between p-5">
                 <div className="rounded-full border border-white/10 bg-black/25 px-3 py-1 text-xs text-stone-200 backdrop-blur">
@@ -97,7 +99,7 @@ export function Hero({ data, locale }: HeroProps) {
                 </div>
               </div>
 
-              <div className="relative aspect-[5/6] min-h-[28rem]">
+              <div className="relative aspect-[4/5] min-h-[18rem] sm:min-h-[24rem] lg:aspect-[5/6] lg:min-h-[28rem]">
                 <Image
                   alt={imageSlides[activeSlide].alt}
                   className="h-full w-full object-cover"

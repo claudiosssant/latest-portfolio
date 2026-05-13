@@ -4,11 +4,13 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   background: #f5f1e8;
   color: #10131a;
+  overflow-x: hidden;
 }
 
 * {

@@ -33,22 +33,19 @@ export function Navbar({ nav, locale, onLocaleChange }: NavbarProps) {
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-ink/85 backdrop-blur-xl">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8 lg:px-12">
-        <a className="flex items-center gap-3 text-white" href="#hero">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-4 sm:px-8 lg:px-12">
+        <a className="flex min-w-0 items-center gap-3 text-white" href="#hero">
           <CodeIcon />
-          <div>
-            <p className="font-display text-lg">Claudio Santos</p>
-            <p className="text-xs uppercase tracking-[0.28em] text-stone-400">
-              Fullstack Developer
-            </p>
+          <div className="min-w-0">
+            <p className="truncate font-display text-base sm:text-lg">Claudio Santos</p>
           </div>
         </a>
 
-        <nav className="hidden items-center gap-7 lg:flex">
+        <nav className="hidden min-w-0 items-center gap-4 xl:gap-7 lg:flex">
           {nav.map((item) => (
             <a
               key={item.id}
-              className="text-sm text-stone-300 transition hover:text-white"
+              className="whitespace-nowrap text-sm text-stone-300 transition hover:text-white"
               href={`#${item.id}`}
             >
               {item.label[locale]}
@@ -56,7 +53,7 @@ export function Navbar({ nav, locale, onLocaleChange }: NavbarProps) {
           ))}
         </nav>
 
-        <div className="hidden items-center gap-3 lg:flex">
+        <div className="hidden shrink-0 items-center gap-3 lg:flex">
           <div className="rounded-full border border-white/10 bg-white/5 p-1 text-sm text-stone-300">
             <button
               className={`rounded-full px-3 py-1.5 transition ${
@@ -78,7 +75,7 @@ export function Navbar({ nav, locale, onLocaleChange }: NavbarProps) {
             </button>
           </div>
           <a
-            className="rounded-full bg-accent px-5 py-3 text-sm font-semibold text-ink transition hover:bg-accentSoft"
+            className="whitespace-nowrap rounded-full bg-accent px-4 py-3 text-sm font-semibold text-ink transition hover:bg-accentSoft xl:px-5"
             href="#contact"
           >
             {locale === "en" ? "Let’s talk" : "Vamos conversar"}

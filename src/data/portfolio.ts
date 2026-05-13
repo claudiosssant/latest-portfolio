@@ -11,7 +11,7 @@ export const portfolioData: PortfolioData = {
     { id: "contact", label: { en: "Contact", pt: "Contato" } },
   ],
   labels: {
-    experience: { en: "2+ years", pt: "2+ anos" },
+    experience: { en: "3+ years", pt: "3+ anos" },
     projects: { en: "Real delivery", pt: "Entrega real" },
     contact: { en: "Get in touch", pt: "Entre em contato" },
     language: { en: "Language", pt: "Idioma" },
@@ -65,7 +65,7 @@ export const portfolioData: PortfolioData = {
     location: "Recife, Pernambuco, Brazil",
     stats: [
       {
-        value: "2+",
+        value: "3+",
         label: { en: "Years building products", pt: "Anos construindo produtos" },
       },
       {

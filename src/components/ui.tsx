@@ -39,7 +39,7 @@ export function SectionHeading({
 
   return (
     <div className={`max-w-3xl ${alignment}`}>
-      <p className={`mb-4 text-xs font-semibold uppercase tracking-[0.32em] ${eyebrowColor}`}>
+      <p className={`mb-4 break-words text-xs font-semibold uppercase tracking-[0.2em] sm:tracking-[0.32em] ${eyebrowColor}`}>
         {eyebrow}
       </p>
       <h2 className={`font-display text-3xl leading-tight sm:text-4xl lg:text-5xl ${titleColor}`}>
