@@ -12,8 +12,8 @@ const config: Config = {
         ink: "#10131a",
         mist: "#f5f1e8",
         sand: "#ebe4d8",
-        accent: "#ca8a04",
-        accentSoft: "#f3c969",
+        accent: "#8f1d2c",
+        accentSoft: "#f05a6a",
         slateWarm: "#d9d0c1",
       },
       boxShadow: {
@@ -25,7 +25,7 @@ const config: Config = {
       },
       backgroundImage: {
         "hero-radial":
-          "radial-gradient(circle at top right, rgba(243, 201, 105, 0.2), transparent 30%), radial-gradient(circle at bottom left, rgba(151, 120, 44, 0.22), transparent 28%)",
+          "radial-gradient(circle at top right, rgba(240, 90, 106, 0.18), transparent 30%), radial-gradient(circle at bottom left, rgba(143, 29, 44, 0.22), transparent 28%)",
       },
       keyframes: {
         float: {

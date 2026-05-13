@@ -135,7 +135,7 @@ export function Projects({ data, locale, trustedBy }: ProjectsProps) {
                 </div>
                 {card.href && card.ctaLabel ? (
                   <a
-                    className="inline-flex items-center justify-center rounded-full bg-accent px-5 py-3 text-sm font-semibold text-ink transition hover:bg-accentSoft"
+                    className="inline-flex items-center justify-center rounded-full bg-[#FF3131] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#e82b2b]"
                     href={card.href}
                     rel="noreferrer"
                     target="_blank"

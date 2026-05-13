@@ -32,7 +32,7 @@ export function About({ data, locale }: AboutProps) {
             {data.highlights.map((highlight, index) => (
               <ScrollReveal
                 key={highlight.en}
-                className="rounded-[1.5rem] border border-stone-200 bg-[#f8f5ef] px-5 py-5 text-sm font-medium leading-7 text-ink transition duration-300 hover:-translate-y-1 hover:border-amber-500/40"
+                className="rounded-[1.5rem] border border-stone-200 bg-[#f8f5ef] px-5 py-5 text-sm font-medium leading-7 text-ink transition duration-300 hover:-translate-y-1 hover:border-rose-700/40"
                 delay={index * 70}
               >
                 {highlight[locale]}

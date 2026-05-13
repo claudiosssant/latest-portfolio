@@ -11,7 +11,7 @@ type NavbarProps = {
 
 function CodeIcon() {
   return (
-    <div className="flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-accent">
+    <div className="flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-[#FF3131]">
       <svg
         aria-hidden="true"
         className="h-5 w-5"
@@ -75,7 +75,7 @@ export function Navbar({ nav, locale, onLocaleChange }: NavbarProps) {
             </button>
           </div>
           <a
-            className="whitespace-nowrap rounded-full bg-accent px-4 py-3 text-sm font-semibold text-ink transition hover:bg-accentSoft xl:px-5"
+            className="whitespace-nowrap rounded-full bg-[#FF3131] px-4 py-3 text-sm font-semibold text-white transition hover:bg-[#e82b2b] xl:px-5"
             href="#contact"
           >
             {locale === "en" ? "Let’s talk" : "Vamos conversar"}

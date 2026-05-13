@@ -18,29 +18,13 @@ body {
 }
 
 ::selection {
-  background: rgba(202, 138, 4, 0.25);
+  background: rgba(143, 29, 44, 0.3);
 }
 
 a,
 button {
-  outline-color: #ca8a04;
+  outline-color: #8f1d2c;
   outline-offset: 4px;
-}
-
-.ambient-pointer {
-  position: absolute;
-  left: var(--pointer-x, 50vw);
-  top: var(--pointer-y, 50vh);
-  height: 22rem;
-  width: 22rem;
-  border-radius: 9999px;
-  background:
-    radial-gradient(circle, rgba(243, 201, 105, 0.16), transparent 58%),
-    radial-gradient(circle, rgba(255, 255, 255, 0.08), transparent 42%);
-  filter: blur(8px);
-  mix-blend-mode: screen;
-  transform: translate3d(-50%, -50%, 0);
-  transition: left 120ms ease-out, top 120ms ease-out;
 }
 
 .scroll-reveal {
@@ -68,7 +52,7 @@ button {
 .tilt-panel::before {
   background: radial-gradient(
     circle at var(--tilt-glow-x, 50%) var(--tilt-glow-y, 50%),
-    rgba(243, 201, 105, 0.22),
+    rgba(240, 90, 106, 0.26),
     transparent 34%
   );
   content: "";

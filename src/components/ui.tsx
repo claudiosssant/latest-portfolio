@@ -35,7 +35,7 @@ export function SectionHeading({
   const alignment = align === "center" ? "mx-auto text-center" : "text-left";
   const titleColor = theme === "dark" ? "text-white" : "text-ink";
   const bodyColor = theme === "dark" ? "text-stone-300" : "text-stone-600";
-  const eyebrowColor = theme === "dark" ? "text-accentSoft" : "text-amber-600";
+  const eyebrowColor = theme === "dark" ? "text-accentSoft" : "text-rose-700";
 
   return (
     <div className={`max-w-3xl ${alignment}`}>
@@ -67,7 +67,7 @@ export function ButtonLink({
 }: ButtonLinkProps) {
   const styles =
     variant === "primary"
-      ? "bg-accent text-ink hover:bg-accentSoft"
+      ? "bg-[#FF3131] text-white hover:bg-[#e82b2b]"
       : "border border-white/20 bg-white/5 text-white hover:bg-white/10";
 
   return (

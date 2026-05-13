@@ -23,12 +23,12 @@ export function Education({ data, locale, labels }: EducationProps) {
             {data.items.map((item, index) => (
               <ScrollReveal
                 key={item.title.en}
-                className="rounded-[1.5rem] border border-stone-200 bg-[#fbf8f3] p-6 transition duration-300 hover:-translate-y-1 hover:border-amber-600/40"
+                className="rounded-[1.5rem] border border-stone-200 bg-[#fbf8f3] p-6 transition duration-300 hover:-translate-y-1 hover:border-rose-700/40"
                 delay={index * 90}
               >
                 <h3 className="font-display text-2xl text-ink">{item.title[locale]}</h3>
                 <p className="mt-2 text-base text-stone-600">{item.subtitle[locale]}</p>
-                <p className="mt-4 text-sm uppercase tracking-[0.22em] text-amber-700">
+                <p className="mt-4 text-sm uppercase tracking-[0.22em] text-rose-800">
                   {item.meta}
                 </p>
               </ScrollReveal>

@@ -22,7 +22,7 @@ export function Experience({ data, locale }: ExperienceProps) {
         {data.items.map((item, index) => (
           <ScrollReveal
             key={item.company}
-            className="grid gap-6 rounded-[2rem] border border-stone-300/70 bg-white p-7 shadow-panel transition duration-300 hover:-translate-y-1 hover:border-amber-600/40 lg:grid-cols-[220px_1fr]"
+            className="grid gap-6 rounded-[2rem] border border-stone-300/70 bg-white p-7 shadow-panel transition duration-300 hover:-translate-y-1 hover:border-rose-700/40 lg:grid-cols-[220px_1fr]"
             delay={index * 110}
           >
             <div className="relative">
@@ -30,7 +30,7 @@ export function Experience({ data, locale }: ExperienceProps) {
                 {String(index + 1).padStart(2, "0")}
               </div>
               <p className="font-display text-2xl text-ink">{item.company}</p>
-              <p className="mt-2 text-sm uppercase tracking-[0.22em] text-amber-700">
+              <p className="mt-2 text-sm uppercase tracking-[0.22em] text-rose-800">
                 {item.period}
               </p>
             </div>

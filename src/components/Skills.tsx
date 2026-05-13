@@ -21,7 +21,7 @@ export function Skills({ data, locale }: SkillsProps) {
         {data.groups.map((group, index) => (
           <ScrollReveal
             key={group.title.en}
-            className="rounded-[1.8rem] border border-stone-200 bg-[#fbf8f3] p-6 shadow-panel transition duration-300 hover:-translate-y-1 hover:border-amber-600/40"
+            className="rounded-[1.8rem] border border-stone-200 bg-[#fbf8f3] p-6 shadow-panel transition duration-300 hover:-translate-y-1 hover:border-rose-700/40"
             delay={index * 80}
           >
             <h3 className="font-display text-2xl text-ink">{group.title[locale]}</h3>
