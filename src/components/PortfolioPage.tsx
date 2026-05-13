@@ -12,12 +12,14 @@ import { Skills } from "@/components/Skills";
 import { Education } from "@/components/Education";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
+import { AmbientPointer } from "@/components/Motion";
 
 export function PortfolioPage() {
   const [locale, setLocale] = useState<Locale>("en");
 
   return (
     <div className="min-h-screen bg-mist text-ink">
+      <AmbientPointer />
       <Navbar
         nav={portfolioData.nav}
         locale={locale}

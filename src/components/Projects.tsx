@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Locale, PortfolioData } from "@/types/portfolio";
 import { Section, SectionHeading } from "@/components/ui";
+import { ScrollReveal } from "@/components/Motion";
 
 type ProjectsProps = {
   data: PortfolioData["projects"];
@@ -16,23 +17,25 @@ export function Projects({ data, locale, trustedBy }: ProjectsProps) {
   return (
     <Section id="projects" className="bg-ink text-white">
       <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
-        <SectionHeading
-          align="left"
-          body={data.intro[locale]}
-          eyebrow={data.eyebrow[locale]}
-          theme="dark"
-          title={data.title[locale]}
-        />
-        <div className="rounded-[1.8rem] border border-white/10 bg-white/5 p-6 text-base leading-8 text-stone-300">
+        <ScrollReveal>
+          <SectionHeading
+            align="left"
+            body={data.intro[locale]}
+            eyebrow={data.eyebrow[locale]}
+            theme="dark"
+            title={data.title[locale]}
+          />
+        </ScrollReveal>
+        <ScrollReveal className="rounded-[1.8rem] border border-white/10 bg-white/5 p-6 text-base leading-8 text-stone-300" delay={120}>
           <p>{trustedBy}</p>
           <p className="mt-3 text-sm uppercase tracking-[0.24em] text-accentSoft">
             {data.impactNote[locale]}
           </p>
-        </div>
+        </ScrollReveal>
       </div>
 
       <div className="mt-10">
-        <div className="flex flex-col gap-5 rounded-[1.8rem] border border-white/10 bg-white/[0.04] p-5 sm:p-6 lg:flex-row lg:items-center lg:justify-between">
+        <ScrollReveal className="flex flex-col gap-5 rounded-[1.8rem] border border-white/10 bg-white/[0.04] p-5 sm:p-6 lg:flex-row lg:items-center lg:justify-between">
           <div>
             <p className="text-xs uppercase tracking-[0.28em] text-accentSoft">
               {data.partnersTitle[locale]}
@@ -51,7 +54,7 @@ export function Projects({ data, locale, trustedBy }: ProjectsProps) {
               />
             ))}
           </div>
-        </div>
+        </ScrollReveal>
 
         <div className="relative left-1/2 mt-6 w-screen -translate-x-1/2 overflow-hidden py-10">
           <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24" />
@@ -77,11 +80,12 @@ export function Projects({ data, locale, trustedBy }: ProjectsProps) {
 
       <div className="mt-14 grid gap-6 md:grid-cols-2">
         {data.cards.map((card, index) => (
-          <article
+          <ScrollReveal
             key={card.title.en}
             className={`group rounded-[2rem] border border-white/10 bg-white/5 p-5 transition duration-300 hover:-translate-y-1 hover:bg-white/[0.08] ${
               card.featured ? "md:col-span-2" : ""
             }`}
+            delay={index * 110}
           >
             <div className="rounded-[1.6rem] border border-dashed border-white/15 bg-[linear-gradient(135deg,rgba(255,255,255,0.07),rgba(255,255,255,0.02))] p-6">
               <div className="flex items-center justify-between">
@@ -154,7 +158,7 @@ export function Projects({ data, locale, trustedBy }: ProjectsProps) {
                 </span>
               ))}
             </div>
-          </article>
+          </ScrollReveal>
         ))}
       </div>
     </Section>

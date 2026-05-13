@@ -1,5 +1,6 @@
 import { Locale, PortfolioData } from "@/types/portfolio";
 import { Section, SectionHeading } from "@/components/ui";
+import { ScrollReveal } from "@/components/Motion";
 
 type SkillsProps = {
   data: PortfolioData["skills"];
@@ -9,16 +10,19 @@ type SkillsProps = {
 export function Skills({ data, locale }: SkillsProps) {
   return (
     <Section id="skills" className="bg-white">
-      <SectionHeading
-        eyebrow={data.eyebrow[locale]}
-        title={data.title[locale]}
-        body={data.intro[locale]}
-      />
+      <ScrollReveal>
+        <SectionHeading
+          eyebrow={data.eyebrow[locale]}
+          title={data.title[locale]}
+          body={data.intro[locale]}
+        />
+      </ScrollReveal>
       <div className="mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-        {data.groups.map((group) => (
-          <article
+        {data.groups.map((group, index) => (
+          <ScrollReveal
             key={group.title.en}
-            className="rounded-[1.8rem] border border-stone-200 bg-[#fbf8f3] p-6 shadow-panel"
+            className="rounded-[1.8rem] border border-stone-200 bg-[#fbf8f3] p-6 shadow-panel transition duration-300 hover:-translate-y-1 hover:border-amber-600/40"
+            delay={index * 80}
           >
             <h3 className="font-display text-2xl text-ink">{group.title[locale]}</h3>
             <div className="mt-6 flex flex-wrap gap-3">
@@ -31,7 +35,7 @@ export function Skills({ data, locale }: SkillsProps) {
                 </span>
               ))}
             </div>
-          </article>
+          </ScrollReveal>
         ))}
       </div>
     </Section>

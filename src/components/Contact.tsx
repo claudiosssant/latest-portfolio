@@ -1,5 +1,6 @@
 import { Locale, PortfolioData } from "@/types/portfolio";
 import { Section, SectionHeading } from "@/components/ui";
+import { ScrollReveal } from "@/components/Motion";
 
 type ContactProps = {
   data: PortfolioData["contact"];
@@ -55,7 +56,7 @@ export function Contact({ data, locale }: ContactProps) {
 
   return (
     <Section id="contact" className="bg-white">
-      <div className="rounded-[2.2rem] bg-ink bg-hero-radial p-8 text-white shadow-panel sm:p-12">
+      <ScrollReveal className="rounded-[2.2rem] bg-ink bg-hero-radial p-8 text-white shadow-panel sm:p-12">
         <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
           <SectionHeading
             eyebrow={data.eyebrow[locale]}
@@ -64,11 +65,14 @@ export function Contact({ data, locale }: ContactProps) {
             body={data.body[locale]}
           />
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-4 lg:justify-self-end">
-            {data.links.map((link) => {
+            {data.links.map((link, index) => {
               const icon = link.kind ? icons[link.kind] : null;
               return (
-                <a
+                <ScrollReveal
                   key={link.label}
+                  delay={index * 80}
+                >
+                <a
                   aria-label={link.label}
                   className="inline-flex h-20 w-full items-center justify-center rounded-[1.4rem] border border-white/10 bg-white/5 text-white transition duration-300 hover:-translate-y-1 hover:bg-white/10 hover:text-accentSoft"
                   href={link.href}
@@ -77,11 +81,12 @@ export function Contact({ data, locale }: ContactProps) {
                 >
                   {icon}
                 </a>
+                </ScrollReveal>
               );
             })}
           </div>
         </div>
-      </div>
+      </ScrollReveal>
     </Section>
   );
 }
